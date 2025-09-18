@@ -633,20 +633,20 @@ section::before {
 /* Music Grid Layout for Bandcamp Cards */
 .music-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 2rem;
     align-items: stretch;
 }
 
 @media (max-width: 1200px) {
     .music-grid {
-        grid-template-columns: 1fr 1fr; 
+        grid-template-columns: 1fr; 
     }
 }
 
 @media (max-width: 768px) {
     .music-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 }
 
