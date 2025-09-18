@@ -1,0 +1,27 @@
+{
+  "name": "stars-and-underground-website",
+  "version": "1.0.0",
+  "description": "Official website for Stars and the Underground band",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve -s . -l 3000",
+    "dev": "npx live-server --port=3000 --open=/index.html",
+    "build": "echo 'No build step required for static site'",
+    "deploy": "echo 'Ready for deployment to Render'"
+  },
+  "keywords": [
+    "music",
+    "band",
+    "website",
+    "static",
+    "responsive",
+    "music-player",
+    "stars-and-underground"
+  ],
+  "author": "Stars and the Underground",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "serve": "^14.2.1"
+  }
+}
