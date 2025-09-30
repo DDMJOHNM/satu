@@ -1225,6 +1225,29 @@ section::before {
     }
 }
 
+/* Video */
+
+.video-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.video-wrapper iframe {
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .video-wrapper {
+        padding: 0 10px;
+    }
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hamburger {
