@@ -17,6 +17,9 @@
 
   gtag('config', 'G-SN218JEHPJ');
 </script>
+<script 
+  src="https://www.paypal.com/sdk/js?client-id=BAA6MSrEmftXcT_tLsVTCZKLnGGO2eWFc6GkcmRLAMjGgL1Ij2mX2BorNfFsHFmz7B2BVZuYcEso6Q9CRI&components=hosted-buttons&disable-funding=venmo&currency=NZD">
+</script>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
@@ -37,9 +40,9 @@
                   <li class="nav-item">
                     <a href="#video" class="nav-link">Video</a>
                 </li> 
-                <!-- <li class="nav-item">
+                <li class="nav-item">
                     <a href="#store" class="nav-link">Merch</a>
-                </li>  -->
+                </li> 
                 <li class="nav-item">
                     <a href="#shows" class="nav-link">Shows</a>
                 </li>
@@ -251,28 +254,38 @@
             </div>
         </div>
     </section>
-    <!-- Store Section
-     <section id="store" class="store">
+    <!-- Store Section -->
+      <section id="store" class="store">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Merch Store</h2>
                 <p class="section-subtitle">Support Stars and the Underground by purchasing official merchandise!</p>
             </div>
-            <div class="store-grid">
-                   <div class="store-item">
+            <div class="store-grid">                   
+                <div class="store-item">
+                 <div id="paypal-container-EVW82TQZ6MM2W"></div>
+                    <script>
+                    paypal.HostedButtons({
+                        hostedButtonId: "EVW82TQZ6MM2W",
+                    }).render("#paypal-container-EVW82TQZ6MM2W")
+                    </script>
+                    </div>
+                  </br>
+                </div>        
+                <!-- <div class="store-item">
                     <img src="images/patch.png" alt="patch" width="250px" height="200px" class="store-image">
-                    <h3>Sew On Patch</h3>
-                    <p>High quality cotton</p>
-                    <p class="price">NZD $10.00</p>                  
+                    <h3>SATU - The Abbey T-Shirt</h3>
+                    <p>Upcycled High quality cotton t-shirt design by Dark Entries</p>
+                    <p class="price">NZD $30.00 (Plus Postage) S/M/L/XL</p>                  
                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                         <input type="hidden" name="cmd" value="_s-xclick">
                         <input type="hidden" name="hosted_button_id" value="YOUR_BUTTON_ID_1">
                         <input type="submit" value="Buy Now" class="btn btn-primary">
                     </form>
-                </div>               
+                </div>                  -->
             </div>
         </div>
-    </section>  -->
+    </section> 
        <!-- Video Section -->
     <section id="video" class="video">
         <div class="container video-block">
