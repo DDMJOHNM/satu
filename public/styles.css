@@ -10,15 +10,23 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif; 
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.015em;
     line-height: 1.6;
-    color: #e0e0e0;
+    color: #c5c9d2;
     background-color: #0a0a0a;
     background-image: 
         radial-gradient(circle at 20% 80%, rgba(120, 0, 120, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(0, 0, 0, 0.3) 0%, transparent 50%),
         linear-gradient(135deg, #0a0a0a 0%, #1a0a0a 50%, #0a0a1a 100%);
-    color: #e0e0e0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Manjari', sans-serif;
 }
 
 .container {
@@ -32,11 +40,11 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(10, 10, 10, 0.95);
+    background: rgba(9, 15, 43, 0.96);
     backdrop-filter: blur(10px);
     z-index: 1000;
     transition: all 0.3s ease;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(160, 32, 240, 0.3);
 }
 
 .nav-container {
@@ -50,14 +58,17 @@ body {
 }
 
 .nav-logo a {
+    display: inline-block;
     font-size: 1.5rem;
     font-weight: 700;
+    line-height: 1;
     color: #800080;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 0 0 10px rgba(128, 0, 128, 0.5);
-    font-family: 'Courier New', monospace;
+    font-family: 'Manjari', sans-serif;
+    transform: translateY(4px);
 }
 
 .nav-menu {
@@ -75,7 +86,7 @@ body {
     text-transform: uppercase;
     font-size: 0.9rem;
     letter-spacing: 1px;
-    font-family: 'Courier New', monospace;
+    font-family: 'Manjari', sans-serif;
 }
 
 .nav-link:hover {
@@ -203,7 +214,7 @@ body {
         0 0 10px rgba(128, 0, 128, 0.5),
         0 0 20px rgba(128, 0, 128, 0.3),
         0 0 30px rgba(128, 0, 128, 0.1);
-    font-family: 'Courier New', monospace;
+    font-family: 'Manjari', sans-serif;
     position: relative;
     display:none
 }
@@ -349,6 +360,17 @@ section {
     position: relative;
 }
 
+section:not(.hero) {
+    padding-top: 112px;
+}
+
+.music,
+.press,
+.video,
+.store {
+    background-color: #090f2b;
+}
+
 section::before {
     content: '';
     position: absolute;
@@ -366,14 +388,14 @@ section::before {
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: 1.35rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: #800080;
+    color: #79cbd3;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-shadow: 0 0 10px rgba(128, 0, 128, 0.3);
-    font-family: 'Courier New', monospace;
+    text-shadow: 0 0 8px rgba(121, 203, 211, 0.18);
+    font-family: 'Manjari', sans-serif;
     position: relative;
 }
 
@@ -414,7 +436,7 @@ section::before {
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 0 0 5px rgba(128, 0, 128, 0.3);
-    font-family: 'Courier New', monospace;
+    font-family: 'Manjari', sans-serif;
 }
 
 .about-text {
@@ -431,9 +453,9 @@ section::before {
 
 .about-text p {
     margin-bottom: 1.25rem;
-    color: #fff;
+    color: #c5c9d2;
     line-height: 1.65;
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
@@ -533,7 +555,7 @@ section::before {
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 0 0 5px rgba(128, 0, 128, 0.3);
-    font-family: 'Courier New', monospace;
+    font-family: 'Manjari', sans-serif;
     text-align: center;
 }
 
@@ -563,8 +585,8 @@ section::before {
 }
 
 .press-quote p {
-    color: #e0e0e0;
-    font-style: italic;
+    color: #c5c9d2;
+    font-style: normal;
     line-height: 1.6;
     margin-bottom: 1rem;
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
@@ -974,7 +996,7 @@ section::before {
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 0 0 5px rgba(128, 0, 128, 0.3);
-    font-family: 'Courier New', monospace;
+    font-family: 'Manjari', sans-serif;
     text-align: center;
 }
 
@@ -1295,12 +1317,6 @@ section::before {
     }
 }
 
-/* Video */
-
-section.video {
-    padding-top: 6.5rem;
-}
-
 .video-block .section-header {
     margin-bottom: 5rem;
 }
@@ -1345,7 +1361,7 @@ section.video {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: rgba(10, 10, 10, 0.98);
+        background-color: rgba(9, 15, 43, 0.98);
         width: 100%;
         text-align: center;
         transition: 0.3s;
@@ -1453,7 +1469,7 @@ section.video {
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.35rem;
     }
 
     .hero-buttons {
