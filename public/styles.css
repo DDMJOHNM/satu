@@ -124,20 +124,34 @@ body {
     border-bottom: 1px solid #330033;
 }
 
-.hero-video {
+.hero-background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.hero-video iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    object-fit: cover;
+.hero-photo {
+    min-width: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-photo-john {
+    background-image: url('images/John.png');
+}
+
+.hero-photo-johnmcd {
+    background-image: url('images/johnmcd.png');
+}
+
+.hero-photo-hannah {
+    background-image: url('images/hannah.png');
 }
 
 .hero-overlay {
@@ -209,6 +223,26 @@ body {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+}
+
+.hero-photo-credit {
+    position: absolute;
+    right: 1rem;
+    bottom: 0.75rem;
+    z-index: 1;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+}
+
+.hero-photo-credit a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.hero-photo-credit a:hover {
+    color: #fff;
+    text-decoration: underline;
 }
 
 .btn {
@@ -407,6 +441,21 @@ section::before {
     margin-bottom: 0;
 }
 
+.about-band-photos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.about-band-photos img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
 .stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -465,11 +514,16 @@ section::before {
 }
 
 /* Press Section */
+.press {
+    border-bottom: 1px solid #330000;
+}
+
 .press-section {
     width: 100%;
+    max-width: 52rem;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 0;
-    padding-top: 2.5rem;
-    border-top: 1px solid rgba(128, 0, 128, 0.3);
 }
 
 .press-section h3 {
@@ -493,8 +547,7 @@ section::before {
 
 .press-quote {
     display: inline-block;
-    width: fit-content;
-    max-width: min(100%, 42rem);
+    width: 100%;
     background: #16213e;
     padding: 1.5rem;
     border-radius: 15px;
