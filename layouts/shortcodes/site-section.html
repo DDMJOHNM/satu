@@ -1,0 +1,9 @@
+{{- $id := .Get 0 -}}
+{{- $source := readFile "public/index.html" -}}
+{{- $pattern := printf `(?s)<section id="%s".*?</section>` $id -}}
+{{- $matches := findRE $pattern $source 1 -}}
+{{- if not $matches -}}
+    {{- errorf "Section %q was not found in public/index.html" $id -}}
+{{- end -}}
+{{- $imagePrefix := printf `src="%s` ("images/" | relURL) -}}
+{{- index $matches 0 | replaceRE `src="\./images/` $imagePrefix | safeHTML -}}

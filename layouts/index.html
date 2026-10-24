@@ -1,0 +1,23 @@
+{{ define "main" }}
+<section id="home" class="hero">
+    <div class="hero-background" aria-hidden="true">
+        <div class="hero-photo hero-photo-john"></div>
+        <div class="hero-photo hero-photo-johnmcd"></div>
+        <div class="hero-photo hero-photo-hannah"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1 class="hero-title">Stars and the Underground</h1>
+            <p class="hero-subtitle">Post-Punk, Shoegaze and Dark Synthwave from New Zealand</p>
+            <div class="hero-buttons">
+                <a href="{{ "music/" | relURL }}" class="btn btn-primary">Listen Now</a>
+                <a href="{{ "shows/" | relURL }}" class="btn btn-secondary">Upcoming Shows</a>
+            </div>
+        </div>
+    </div>
+    <p class="hero-photo-credit">
+        Photos by <a href="https://www.instagram.com/rileycochrane_/" target="_blank" rel="noopener noreferrer">@rileycochrane_</a>
+    </p>
+</section>
+{{ end }}

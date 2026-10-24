@@ -1,0 +1,18 @@
+baseURL = "/"
+languageCode = "en-nz"
+title = "Stars and the Underground"
+publishDir = "dist"
+disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
+
+# Keep the existing assets as the source of truth while Hugo owns the build.
+[[module.mounts]]
+source = "public/styles.css"
+target = "static/styles.css"
+
+[[module.mounts]]
+source = "public/script.js"
+target = "static/script.js"
+
+[[module.mounts]]
+source = "public/images"
+target = "static/images"

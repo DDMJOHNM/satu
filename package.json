@@ -1,0 +1,10 @@
+{
+  "name": "stars-and-underground-hugo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hugo site for Stars and the Underground",
+  "scripts": {
+    "dev": "hugo server --disableFastRender",
+    "build": "hugo --gc --minify"
+  }
+}

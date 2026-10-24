@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: stars-and-underground
+    env: static
+    buildCommand: hugo --gc --minify
+    staticPublishPath: ./dist
+    envVars:
+      - key: HUGO_VERSION
+        value: 0.91.2
