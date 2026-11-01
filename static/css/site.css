@@ -314,18 +314,18 @@ section p:empty {
     gap: 2rem;
 }
 
-#about > div > div:nth-child(2) {
+#about > div > div:first-child {
     display: grid;
     gap: 1.25rem;
 }
 
-#about > div > div:nth-child(2) > div {
+#about > div > div:first-child > div {
     padding: 1.4rem 1.5rem 0.5rem;
     background: rgba(18, 29, 30, 0.82);
     border: 1px solid rgba(120, 160, 168, 0.2);
 }
 
-#music > div > div:nth-child(2) {
+#music > div > div:first-child {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.25rem;
@@ -370,7 +370,7 @@ section p:empty {
     margin-bottom: 0;
 }
 
-#music > div > div:nth-child(2) > div {
+#music > div > div:first-child > div {
     padding: 1.2rem;
     background: rgba(18, 29, 30, 0.82);
     border: 1px solid rgba(120, 160, 168, 0.2);
@@ -427,7 +427,7 @@ section p:empty {
     height: 220px;
 }
 
-#music > div > div:nth-child(2) > div > div:has(> iframe) {
+#music > div > div:first-child > div > div:has(> iframe) {
     margin-bottom: 1.4rem;
 }
 
@@ -441,7 +441,7 @@ section p:empty {
     margin-top: 3rem;
 }
 
-#shows > div > div:nth-child(2) > div {
+#shows > div > div:first-child > div {
     display: grid;
     grid-template-columns: 8rem 1fr auto;
     gap: 1.5rem;
@@ -524,8 +524,8 @@ section p:empty {
     .site-footer,
     .triptych,
     .portraits,
-    #music > div > div:nth-child(2),
-    #shows > div > div:nth-child(2) > div,
+    #music > div > div:first-child,
+    #shows > div > div:first-child > div,
     #shows > div > div:last-child > div > div {
         display: grid;
         grid-template-columns: 1fr;
