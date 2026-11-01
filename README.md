@@ -29,6 +29,4 @@ The generated site is written to `public/`.
 - Merch
 - Shows
 
-The previous HydePHP project is archived at:
 
-`/Users/johnmason/dev/projects/satu-hyde-archive`
