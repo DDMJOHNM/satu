@@ -376,6 +376,10 @@ section p:empty {
     border: 1px solid rgba(120, 160, 168, 0.2);
 }
 
+#music h3 {
+    color: var(--copper);
+}
+
 #store > div > div:nth-child(2) {
     padding: 1.2rem;
     background: rgba(18, 29, 30, 0.82);
@@ -448,6 +452,10 @@ section p:empty {
     align-items: center;
     padding: 1.3rem 0;
     border-top: 1px solid var(--line);
+}
+
+#shows h3 {
+    color: var(--copper);
 }
 
 #shows h3 + p,
