@@ -1,9 +1,9 @@
 :root {
     --ink: #100e0c;
     --paper: #f4efe6;
-    --muted: #b7aa98;
-    --line: rgba(244, 239, 230, 0.16);
-    --copper: #e07a45;
+    --muted: #a9bcc4;
+    --line: rgba(214, 228, 232, 0.16);
+    --copper: #7ec8d6;
     --panel: #1a1714;
 }
 
@@ -47,9 +47,14 @@ html {
 
 body {
     margin: 0;
-    background:
-        radial-gradient(circle at 85% -10%, rgba(224, 122, 69, 0.18), transparent 32rem),
-        var(--ink);
+    background-color: #061416;
+    background-image:
+        linear-gradient(rgba(6, 8, 10, 0.66), rgba(6, 8, 10, 0.76)),
+        url("../images/streamers.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto, max(150vw, 190vh);
+    background-attachment: fixed;
     color: var(--paper);
     font-family: "Outfit", sans-serif;
     font-weight: 360;
@@ -80,14 +85,35 @@ img {
 }
 
 .site-nav .brand {
-    color: var(--paper);
-    font-family: "Instrument Serif", serif;
-    font-size: 1.55rem;
-    font-style: italic;
-    letter-spacing: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #f4e8e6;
+    font-family: "Cinzel", serif;
+    font-size: 1.7rem;
+    font-weight: 500;
+    letter-spacing: 0.045em;
+    line-height: 1.15;
     text-decoration: none;
     text-transform: none;
-    white-space: nowrap;
+}
+
+.site-nav .brand img {
+    width: 3.15rem;
+    height: 3.15rem;
+    animation: star-spin 12s linear infinite;
+}
+
+@keyframes star-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .site-nav .brand img {
+        animation: none;
+    }
 }
 
 .site-nav ul {
@@ -119,10 +145,33 @@ main {
     padding: 4.5rem 0 6rem;
 }
 
+body.home {
+    background-image:
+        radial-gradient(ellipse 46rem 32rem at 8% 22%, rgba(36, 112, 128, 0.45), transparent 72%),
+        radial-gradient(circle at 92% -8%, rgba(18, 70, 88, 0.32), transparent 26rem),
+        linear-gradient(rgba(6, 8, 10, 0.66), rgba(6, 8, 10, 0.76)),
+        url("../images/streamers.png");
+    background-size: auto, auto, auto, max(150vw, 190vh);
+}
+
+body.shows {
+    background-image:
+        linear-gradient(rgba(6, 8, 10, 0.66), rgba(6, 8, 10, 0.76)),
+        url("../images/the_abbey.png");
+    background-size: auto, max(150vw, 160vh);
+    background-position: center 42%;
+}
+
+body.press,
+body.music,
+body.merch {
+    background-image:
+        linear-gradient(rgba(14, 28, 30, 0.72), rgba(10, 22, 24, 0.82)),
+        url("../images/streamers.png");
+}
+
 .hero {
-    min-height: calc(100vh - 8rem);
     display: grid;
-    align-content: end;
 }
 
 .eyebrow,
@@ -146,6 +195,26 @@ h1 {
     max-width: 11ch;
     margin-top: 0.6rem;
     font-size: clamp(4.5rem, 11vw, 8.5rem);
+}
+
+.hero .lede {
+    color: #b7c6cc;
+}
+
+.hero .button {
+    border-color: #7ec8d6;
+    background: #7ec8d6;
+    color: #071418;
+}
+
+.hero .button-ghost {
+    border-color: rgba(126, 200, 214, 0.8);
+    background: transparent;
+    color: #e7eef0;
+}
+
+.hero .credit {
+    color: #8fd0dc;
 }
 
 .lede {
@@ -183,7 +252,7 @@ h1 {
 
 .triptych {
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0.7rem;
     margin: 0;
 }
@@ -192,7 +261,20 @@ h1 {
     width: 100%;
     height: 28rem;
     object-fit: cover;
-    filter: saturate(0.75) contrast(1.05);
+    filter: saturate(0.28) contrast(1.18) brightness(0.9);
+}
+
+.photo {
+    position: relative;
+    display: block;
+}
+
+#about .photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(168, 224, 220, 0.46);
+    pointer-events: none;
 }
 
 .credit a {
@@ -232,19 +314,38 @@ section p:empty {
     gap: 2rem;
 }
 
-#about div:has(> img + img),
+#about > div > div:nth-child(2) {
+    display: grid;
+    gap: 1.25rem;
+}
+
+#about > div > div:nth-child(2) > div {
+    padding: 1.4rem 1.5rem 0.5rem;
+    background: rgba(18, 29, 30, 0.82);
+    border: 1px solid rgba(120, 160, 168, 0.2);
+}
+
 #music > div > div:nth-child(2) {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.25rem;
 }
 
-#about div:has(> img + img + img) {
+.portraits {
+    display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
     margin: 1.5rem 0;
 }
 
-#about img,
+#about img {
+    display: block;
+    width: 100%;
+    height: 13.5rem;
+    object-fit: cover;
+    object-position: center;
+}
+
 #music img {
     display: block;
     width: 100%;
@@ -259,17 +360,58 @@ section p:empty {
 }
 
 #press div:has(> p + cite) {
-    margin-bottom: 1.5rem;
-    padding: 0 0 1.5rem 1.1rem;
-    border-left: 2px solid var(--copper);
-    border-bottom: 1px solid var(--line);
+    margin-bottom: 1.25rem;
+    padding: 1.2rem 1.3rem;
+    background: rgba(18, 29, 30, 0.82);
+    border: 1px solid rgba(120, 160, 168, 0.2);
 }
 
-#music > div > div:nth-child(2) > div,
+#press div:has(> p + cite) p {
+    margin-bottom: 0;
+}
+
+#music > div > div:nth-child(2) > div {
+    padding: 1.2rem;
+    background: rgba(18, 29, 30, 0.82);
+    border: 1px solid rgba(120, 160, 168, 0.2);
+}
+
 #store > div > div:nth-child(2) {
     padding: 1.2rem;
-    background: var(--panel);
-    border: 1px solid var(--line);
+    background: rgba(18, 29, 30, 0.82);
+    border: 1px solid rgba(120, 160, 168, 0.2);
+}
+
+#store #carousel-container-EVW82TQZ6MM2W {
+    width: 220px;
+    max-width: 220px;
+    flex: none;
+}
+
+#store #paypal-form-fields-container-EVW82TQZ6MM2W .hero-img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+}
+
+#store #paypal-form-fields-container-EVW82TQZ6MM2W .item-header {
+    align-items: baseline;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-size: 1.05rem;
+    line-height: 1.2;
+    overflow-wrap: normal;
+}
+
+#store #paypal-form-fields-container-EVW82TQZ6MM2W .item-header h3,
+#store #paypal-form-fields-container-EVW82TQZ6MM2W .item-header .item-title,
+#store #paypal-form-fields-container-EVW82TQZ6MM2W .item-header .price-container {
+    max-width: none;
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 1.2;
+    white-space: nowrap;
 }
 
 #music iframe,
@@ -281,10 +423,16 @@ section p:empty {
 }
 
 #music iframe {
-    height: 400px;
+    width: min(220px, 100%);
+    height: 220px;
+}
+
+#music > div > div:nth-child(2) > div > div:has(> iframe) {
+    margin-bottom: 1.4rem;
 }
 
 #video iframe {
+    width: min(36rem, 100%);
     height: auto;
     aspect-ratio: 16 / 9;
 }
@@ -339,7 +487,11 @@ section p:empty {
 }
 
 .site-footer h2 {
-    font-size: 2.4rem;
+    font-family: "Cinzel", serif;
+    font-weight: 500;
+    font-size: 1.7rem;
+    letter-spacing: 0.045em;
+    line-height: 1.2;
 }
 
 .site-footer p,
@@ -371,7 +523,7 @@ section p:empty {
     .site-nav,
     .site-footer,
     .triptych,
-    #about div:has(> img + img),
+    .portraits,
     #music > div > div:nth-child(2),
     #shows > div > div:nth-child(2) > div,
     #shows > div > div:last-child > div > div {

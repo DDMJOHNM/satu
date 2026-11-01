@@ -7,11 +7,20 @@
     <meta name="theme-color" content="#100e0c">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B47JLNF8ZN"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-B47JLNF8ZN');
+    </script>
     <script src="https://www.paypal.com/sdk/js?client-id=BAA6MSrEmftXcT_tLsVTCZKLnGGO2eWFc6GkcmRLAMjGgL1Ij2mX2BorNfFsHFmz7B2BVZuYcEso6Q9CRI&components=hosted-buttons&disable-funding=venmo&currency=NZD"></script>
 </head>
-<body>
+<body{{ if .IsHome }} class="home"{{ else if eq .RelPermalink "/shows/" }} class="shows"{{ else if eq .RelPermalink "/press/" }} class="press"{{ else if eq .RelPermalink "/music/" }} class="music"{{ else if eq .RelPermalink "/merch/" }} class="merch"{{ end }}>
     {{ partial "navigation.html" . }}
     <main>
         {{ block "main" . }}{{ end }}
