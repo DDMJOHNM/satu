@@ -1,37 +1,34 @@
 # Stars and the Underground
 
-The official Stars and the Underground website, built with Hugo.
+An intentionally unstyled Hugo site containing the Stars and the Underground
+content.
 
-## Local development
-
-Hugo Extended is required.
+## Development
 
 ```sh
-npm run dev
+hugo server
 ```
 
-Open <http://localhost:1313>. Hugo watches the source files and reloads the
-page when they change.
+Open <http://localhost:1313>.
 
 ## Production build
 
 ```sh
-npm run build
+hugo --gc --minify
 ```
 
-The generated site is written to `dist/`.
+The generated site is written to `public/`.
 
-## Project structure
+## Pages
 
-- `config.toml` — Hugo configuration and asset mounts
-- `content/` — individual About, Music, Press, Video, Merch, and Shows pages
-- `layouts/` — shared page shell, navigation, footer, and home page
-- `public/index.html` — source for the existing section content
-- `public/styles.css` — site styles
-- `public/script.js` — site behaviour
-- `public/images/` — images and press kit
-- `render.yaml` — Render deployment configuration
+- Home
+- About
+- Music
+- Press
+- Video
+- Merch
+- Shows
 
-Each content page uses the `site-section` shortcode to render its corresponding
-section from the original page. This preserves the existing content while
-providing a separate URL for every main section.
+The previous HydePHP project is archived at:
+
+`/Users/johnmason/dev/projects/satu-hyde-archive`

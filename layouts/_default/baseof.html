@@ -1,19 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ site.Language.Lang }}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
-    <link rel="stylesheet" href="{{ "styles.css" | relURL }}">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manjari:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B47JLNF8ZN"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-B47JLNF8ZN');
-    </script>
+    <meta name="theme-color" content="#100e0c">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
     <script src="https://www.paypal.com/sdk/js?client-id=BAA6MSrEmftXcT_tLsVTCZKLnGGO2eWFc6GkcmRLAMjGgL1Ij2mX2BorNfFsHFmz7B2BVZuYcEso6Q9CRI&components=hosted-buttons&disable-funding=venmo&currency=NZD"></script>
 </head>
 <body>
@@ -22,6 +17,5 @@
         {{ block "main" . }}{{ end }}
     </main>
     {{ partial "footer.html" . }}
-    <script src="{{ "script.js" | relURL }}"></script>
 </body>
 </html>
