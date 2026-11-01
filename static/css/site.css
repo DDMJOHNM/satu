@@ -19,31 +19,29 @@ html {
     navigation: auto;
 }
 
-::view-transition-old(page) {
-    animation: 280ms ease both page-leave;
+::view-transition-old(root) {
+    animation: 320ms ease both fade-out;
 }
 
-::view-transition-new(page) {
-    animation: 460ms cubic-bezier(0.22, 1, 0.36, 1) both page-enter;
+::view-transition-new(root) {
+    animation: 420ms ease 280ms both fade-in;
 }
 
-@keyframes page-leave {
+@keyframes fade-out {
     to {
         opacity: 0;
-        transform: translateY(-12px);
     }
 }
 
-@keyframes page-enter {
+@keyframes fade-in {
     from {
         opacity: 0;
-        transform: translateY(18px);
     }
 }
 
-@supports not (view-transition-name: page) {
-    main {
-        animation: page-enter 460ms cubic-bezier(0.22, 1, 0.36, 1) both;
+@supports not (view-transition-name: root) {
+    body {
+        animation: fade-in 420ms ease both;
     }
 }
 
@@ -68,7 +66,6 @@ img {
 }
 
 .site-nav {
-    view-transition-name: site-nav;
     position: sticky;
     top: 0;
     z-index: 20;
@@ -117,7 +114,6 @@ img {
 }
 
 main {
-    view-transition-name: page;
     width: min(1120px, calc(100% - 8vw));
     margin: 0 auto;
     padding: 4.5rem 0 6rem;
@@ -335,7 +331,6 @@ section p:empty {
 }
 
 .site-footer {
-    view-transition-name: site-footer;
     display: grid;
     grid-template-columns: 1.4fr 1fr;
     gap: 2rem;
